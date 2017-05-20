@@ -7,7 +7,7 @@ def init_app(app):
     Postman.app = app
     Postman.mail = Mail(app)
     db.signals.post_save.connect(Postman.send_client_token,
-                                 sender=models.SingleToken)
+                                 sender=models.SurveyToken)
 
 
 class Postman:
